@@ -1,7 +1,8 @@
-package com.android.newsmvvm.data.database;
+package com.android.newsmvvm.data.dao;
 
 import static androidx.room.OnConflictStrategy.REPLACE;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
@@ -18,5 +19,5 @@ public interface NewsDao {
     void addArticle(Article article);
 
     @Query("SELECT * from Article")
-    List<Article> getArticles();
+    LiveData<List<Article>> getArticles();
 }
