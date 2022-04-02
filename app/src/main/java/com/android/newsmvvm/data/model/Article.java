@@ -14,6 +14,7 @@ public class Article {
     @PrimaryKey(autoGenerate = true)
     private Integer id;
 
+
     @SerializedName("source")
     @Expose
     @Ignore
@@ -53,6 +54,15 @@ public class Article {
     @Expose
     @ColumnInfo(name = "content")
     private String content;
+
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public Source getSource() {
         return source;

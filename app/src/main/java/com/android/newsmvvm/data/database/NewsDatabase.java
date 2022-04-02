@@ -10,7 +10,8 @@ import com.android.newsmvvm.data.dao.NewsDao;
 import com.android.newsmvvm.data.model.Article;
 
 @Database(entities = {Article.class},
-        version = 1)
+        version = 1,
+        exportSchema = false)
 public abstract class NewsDatabase extends RoomDatabase {
 
     private static final String DATABASE_NAME="NewsDatabase";

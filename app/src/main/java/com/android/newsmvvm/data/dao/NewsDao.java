@@ -19,5 +19,5 @@ public interface NewsDao {
     void addArticle(Article article);
 
     @Query("SELECT * from Article")
-    LiveData<List<Article>> getArticles();
+    List<Article> getArticles();
 }
